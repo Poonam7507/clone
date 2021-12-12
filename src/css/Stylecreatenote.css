@@ -1,0 +1,21 @@
+.maincontent{
+    margin-left: 32%;
+    margin-top: 5%;
+   
+
+}
+input[type="text"]{
+    padding-left: 5px;
+    padding: 1%;
+    border:1px solid grey;
+    border-radius: 10px;
+    width:45vw;
+}
+input[type="text"]::placeholder{
+    font-size: 1.3vw;
+
+
+    color:white;
+
+
+}
