@@ -31,3 +31,13 @@ textarea::placeholder{
 
     color:rgb(212, 210, 210);
 }
+.icons{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2vw;
+}
+.tooltip{
+    font-size: 1.2vw;
+    margin-top: 2px;
+    margin-right: 35px;
+}

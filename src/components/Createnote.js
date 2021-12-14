@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/Stylecreatenote.css';
 import { useState } from 'react';
+import Tooltip from "@material-ui/core/Tooltip";
+import { FormatColorFillSharp } from '@material-ui/icons';
 
 export default function Createnote(props) {
     
@@ -34,6 +36,14 @@ const [expand,setExpand]=useState(false);
     const shrinkIt=()=>{
         setExpand(false);
     }
+
+    const changeColor=()=>{
+        return(
+            {
+                  
+            }
+        )
+    }
     return (
         <div className="maincontent" >
             <form>
@@ -62,10 +72,21 @@ const [expand,setExpand]=useState(false);
                 onClick={expandIt} 
                 />
             </div>
+            {expand?
+            <div className='icons'>
             <div>
-               {expand? <div onClick={addEvent}>close</div>:null}
+            <Tooltip title="remind me" className="tooltip"><i className='fa fa-bell'/></Tooltip>
+            <Tooltip title="collaborator" className="tooltip"><i className="fa fa-user-plus"/></Tooltip>
+            <Tooltip title="change colour" className="tooltip "  ><input type="color" id="colorfiller" onClick={changeColor}></input></Tooltip>
+            {/* <Tooltip title="change colour" className="tooltip colorfiller"  ><FormatColorFillSharp /></Tooltip> */}
 
-            </div>
+            <Tooltip title="Add image" className="tooltip" ><i className="fa fa-image"/></Tooltip>
+               </div>
+                <div onClick={addEvent}>close</div>
+
+
+
+            </div>:null}
             </div>
             </form>
         </div>
