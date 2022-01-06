@@ -19,10 +19,10 @@ export default function Navbar() {
                <input type="search" className='formsearch'  placeholder="Search Here" autoComplete='off'></input>
             </div>
              <div className="nav">
-             <li>1</li>
+             {/* <li>1</li>
              <li>2</li>
              <li>3</li>
-             <li>4</li>
+             <li>4</li> */}
                 
              </div>
          

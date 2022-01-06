@@ -2,7 +2,8 @@ import React from 'react';
 import '../css/Stylecreatenote.css';
 import { useState } from 'react';
 import Tooltip from "@material-ui/core/Tooltip";
-import { FormatColorFillSharp } from '@material-ui/icons';
+// import { FormatColorFillSharp } from '@material-ui/icons';
+import Todolist from './Todolist';
 
 export default function Createnote(props) {
     
@@ -47,7 +48,7 @@ const [expand,setExpand]=useState(false);
     return (
         <div className="maincontent" >
             <form>
-            <div className='formdata' onDoubleClick={shrinkIt}>
+            <div className='formdata' onDoubleClick={shrinkIt} >
             <div>
           {  expand?
                 <input 
@@ -62,7 +63,7 @@ const [expand,setExpand]=useState(false);
                 /> :null}
             </div>
             <div>
-
+          {/* <Todolist/> */}
                 <textarea rows="" column="" 
                 value={note.content}
                 name="content"
@@ -77,7 +78,14 @@ const [expand,setExpand]=useState(false);
             <div>
             <Tooltip title="remind me" className="tooltip"><i className='fa fa-bell'/></Tooltip>
             <Tooltip title="collaborator" className="tooltip"><i className="fa fa-user-plus"/></Tooltip>
-            <Tooltip title="change colour" className="tooltip "  ><input type="color" id="colorfiller" onClick={changeColor}></input></Tooltip>
+            <Tooltip title="change colour" className="tooltip "  >
+         
+            <input type="color" 
+            id="colorfiller" 
+            onClick={changeColor}>
+
+            </input>
+            </Tooltip>
             {/* <Tooltip title="change colour" className="tooltip colorfiller"  ><FormatColorFillSharp /></Tooltip> */}
 
             <Tooltip title="Add image" className="tooltip" ><i className="fa fa-image"/></Tooltip>
